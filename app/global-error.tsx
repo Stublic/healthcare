@@ -1,6 +1,6 @@
 "use client";
 
-import * as Sentry from "@sentry/nextjs";
+import * as Sentry from "@/node_modules/@sentry/nextjs/build/types/index.types";
 import Error from "next/error";
 import { useEffect } from "react";
 

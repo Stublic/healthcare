@@ -1,4 +1,4 @@
-import * as Sentry from "@sentry/nextjs";
+import * as Sentry from "@/node_modules/@sentry/nextjs/build/types/index.types";
 
 export async function register() {
   if (process.env.NEXT_RUNTIME === "nodejs") {
