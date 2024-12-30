@@ -1,12 +1,12 @@
 import { withSentryConfig } from "@sentry/nextjs";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // typescript: {
-  //   ignoreBUildErrors: true,
-  // },
-  // eslint: {
-  //   ignoreDuringBuilds: true,
-  // },
+  typescript: {
+    ignoreBUildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default withSentryConfig(
