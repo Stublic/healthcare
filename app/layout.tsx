@@ -12,9 +12,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "CarePulse",
+  title: "Webica CRM | Za privatni zdravstveni sektor",
   description:
-    "A healthcare patient management System designed to streamline patient registration, appointment scheduling, and medical records management for healthcare providers.",
+    "Webica CRM je softver za upravljanje pacijentima i poslovanjem u privatnom zdravstvenom sektoru.",
   icons: {
     icon: "/assets/icons/logo-icon.svg",
   },

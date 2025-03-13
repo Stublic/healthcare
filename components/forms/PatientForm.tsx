@@ -53,16 +53,18 @@ export const PatientForm = () => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 space-y-6">
         <section className="mb-12 space-y-4">
-          <h1 className="header">Hi there 👋</h1>
-          <p className="text-dark-700">Get started with appointments.</p>
+          <h1 className="header">Dobrodošli 👋</h1>
+          <p className="text-dark-700">
+            Započnite tako da se prijavite u sustav.
+          </p>
         </section>
 
         <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="name"
-          label="Full name"
-          placeholder="John Doe"
+          label="Ime i prezime"
+          placeholder="Jurica Horvat"
           iconSrc="/assets/icons/user.svg"
           iconAlt="user"
         />
@@ -72,7 +74,7 @@ export const PatientForm = () => {
           control={form.control}
           name="email"
           label="Email"
-          placeholder="johndoe@gmail.com"
+          placeholder="jurica@gmail.com"
           iconSrc="/assets/icons/email.svg"
           iconAlt="email"
         />
@@ -81,11 +83,11 @@ export const PatientForm = () => {
           fieldType={FormFieldType.PHONE_INPUT}
           control={form.control}
           name="phone"
-          label="Phone number"
-          placeholder="(555) 123-4567"
+          label="Telefon"
+          placeholder="+385 123-4567"
         />
 
-        <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
+        <SubmitButton isLoading={isLoading}>Dalje</SubmitButton>
       </form>
     </Form>
   );

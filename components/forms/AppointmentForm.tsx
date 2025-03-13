@@ -119,13 +119,13 @@ export const AppointmentForm = ({
   let buttonLabel;
   switch (type) {
     case "cancel":
-      buttonLabel = "Cancel Appointment";
+      buttonLabel = "Otkaži Pregled";
       break;
     case "schedule":
-      buttonLabel = "Schedule Appointment";
+      buttonLabel = "Zakaži Pregled";
       break;
     default:
-      buttonLabel = "Submit Apppointment";
+      buttonLabel = "Zatraži Pregled";
   }
 
   return (
@@ -133,9 +133,9 @@ export const AppointmentForm = ({
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 space-y-6">
         {type === "create" && (
           <section className="mb-12 space-y-4">
-            <h1 className="header">New Appointment</h1>
+            <h1 className="header">Novi pregled</h1>
             <p className="text-dark-700">
-              Request a new appointment in 10 seconds.
+              Zatražite novi pregled u nekoliko jednostavnih koraka.
             </p>
           </section>
         )}
@@ -146,8 +146,8 @@ export const AppointmentForm = ({
               fieldType={FormFieldType.SELECT}
               control={form.control}
               name="primaryPhysician"
-              label="Doctor"
-              placeholder="Select a doctor"
+              label="Liječnik"
+              placeholder="Odaberite liječnika"
             >
               {Doctors.map((doctor, i) => (
                 <SelectItem key={doctor.name + i} value={doctor.name}>
@@ -169,9 +169,9 @@ export const AppointmentForm = ({
               fieldType={FormFieldType.DATE_PICKER}
               control={form.control}
               name="schedule"
-              label="Expected appointment date"
+              label="Predloženi datum i vrijeme"
               showTimeSelect
-              dateFormat="MM/dd/yyyy  -  h:mm aa"
+              dateFormat="dd/MM/yyyy  -  h:mm"
             />
 
             <div
@@ -181,8 +181,8 @@ export const AppointmentForm = ({
                 fieldType={FormFieldType.TEXTAREA}
                 control={form.control}
                 name="reason"
-                label="Appointment reason"
-                placeholder="Annual montly check-up"
+                label="Razlog posjeta"
+                placeholder="Mjesečni pregled nakon operacije"
                 disabled={type === "schedule"}
               />
 
@@ -190,8 +190,8 @@ export const AppointmentForm = ({
                 fieldType={FormFieldType.TEXTAREA}
                 control={form.control}
                 name="note"
-                label="Comments/notes"
-                placeholder="Prefer afternoon appointments, if possible"
+                label="Dodatne napomene"
+                placeholder="Preferiram jutarnje termine, ukoliko je moguće"
                 disabled={type === "schedule"}
               />
             </div>
@@ -203,8 +203,8 @@ export const AppointmentForm = ({
             fieldType={FormFieldType.TEXTAREA}
             control={form.control}
             name="cancellationReason"
-            label="Reason for cancellation"
-            placeholder="Urgent meeting came up"
+            label="Razlog otkazivanja"
+            placeholder="Neodgodive obiteljske obaveze"
           />
         )}
 

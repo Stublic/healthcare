@@ -19,7 +19,7 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     accessorKey: "patient",
-    header: "Patient",
+    header: "Pacijent",
     cell: ({ row }) => {
       const appointment = row.original;
       return <p className="text-14-medium ">{appointment.patient.name}</p>;
@@ -39,7 +39,7 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     accessorKey: "schedule",
-    header: "Appointment",
+    header: "Termin",
     cell: ({ row }) => {
       const appointment = row.original;
       return (
@@ -51,7 +51,7 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     accessorKey: "primaryPhysician",
-    header: "Doctor",
+    header: "Liječnik",
     cell: ({ row }) => {
       const appointment = row.original;
 
@@ -75,7 +75,7 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     id: "actions",
-    header: () => <div className="pl-4">Actions</div>,
+    header: () => <div className="pl-4">Upravljanje</div>,
     cell: ({ row }) => {
       const appointment = row.original;
 
@@ -86,16 +86,16 @@ export const columns: ColumnDef<Appointment>[] = [
             userId={appointment.userId}
             appointment={appointment}
             type="schedule"
-            title="Schedule Appointment"
-            description="Please confirm the following details to schedule."
+            title="Zakaži Pregled"
+            description="Molimo potvrdite detalje za zakazivanje pregleda."
           />
           <AppointmentModal
             patientId={appointment.patient.$id}
             userId={appointment.userId}
             appointment={appointment}
             type="cancel"
-            title="Cancel Appointment"
-            description="Are you sure you want to cancel your appointment?"
+            title="Otkaži Pregled"
+            description="Jeste li sigurni da želite otkazati pregled?"
           />
         </div>
       );

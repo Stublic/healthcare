@@ -22,14 +22,14 @@ const AdminPage = async () => {
           />
         </Link>
 
-        <p className="text-16-semibold">Admin Dashboard</p>
+        <p className="text-16-semibold">Administracijsko sučelje</p>
       </header>
 
       <main className="admin-main">
         <section className="w-full space-y-4">
-          <h1 className="header">Welcome 👋</h1>
+          <h1 className="header">Poliklinika Neon 👋</h1>
           <p className="text-dark-700">
-            Start the day with managing new appointments
+            Započnite s upravljanjem pregledima i pacijentima.
           </p>
         </section>
 
@@ -37,19 +37,19 @@ const AdminPage = async () => {
           <StatCard
             type="appointments"
             count={appointments.scheduledCount}
-            label="Scheduled appointments"
+            label="Zakazani pregledi"
             icon={"/assets/icons/appointments.svg"}
           />
           <StatCard
             type="pending"
             count={appointments.pendingCount}
-            label="Pending appointments"
+            label="Pregledi na čekanju"
             icon={"/assets/icons/pending.svg"}
           />
           <StatCard
             type="cancelled"
             count={appointments.cancelledCount}
-            label="Cancelled appointments"
+            label="Otkazani pregledi"
             icon={"/assets/icons/cancelled.svg"}
           />
         </section>
